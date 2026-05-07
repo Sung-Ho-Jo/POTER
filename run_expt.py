@@ -17,15 +17,15 @@ python run_expt.py \\
     --f_power      0.1 \\
     --clip_cap     20 \\
     --n_epochs     300 \\
-    --lr           1e-4 \\
-    --weight_decay 1e-3 \\
+    --lr           1e-5 \\
+    --weight_decay 1.0 \\
     --batch_size   128 \\
     --seed         1 \\
     --gpu          0
 
 # ERM baseline (no --ot_cache):
 python run_expt.py --dataset CUB --data_dir /path/to/data \\
-    --n_epochs 300 --lr 1e-4 --weight_decay 1e-3 --batch_size 128 --seed 1 --gpu 0
+    --n_epochs 300 --lr 1e-5 --weight_decay 1.0 --batch_size 128 --seed 1 --gpu 0
 
 Dataset subdirectory layout expected under --data_dir:
     CUB          → <data_dir>/cub/
