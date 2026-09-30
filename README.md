@@ -1,5 +1,10 @@
 # Optimal Transport Reweighting for Robust Learning under Spurious Correlations and Label Noise
 
+This repository contains the official implementation of the following paper accepted at NeurIPS 2026.
+
+> Sung Ho Jo, Seonghwi Kim, Wonsang Yun, and Minwoo Chae<br>
+> Optimal Transport Reweighting for Robust Learning under Spurious Correlations and Label Noise
+
 ## Overview
 
 POTER derives sample importance weights from the dual potentials of
