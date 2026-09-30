@@ -1,4 +1,4 @@
-# POTER: Optimal Transport Reweighting for Robust Learning under Spurious Correlations and Label Noise
+# Optimal Transport Reweighting for Robust Learning under Spurious Correlations and Label Noise
 
 ## Overview
 
