@@ -1,14 +1,18 @@
-# POTER: Optimal Transport Reweighting for Robust Learning under Spurious Correlations
+# POTER: Optimal Transport Reweighting for Robust Learning under Spurious Correlations and Label Noise
 
 ## Overview
 
-POTER reweights training samples using dual variables from class-conditioned
-entropic optimal transport (OT) between training features and a validation-based
-reference distribution. Unlike loss-based approaches, POTER estimates sample importance
-from distributional alignment, allowing it to emphasize bias-conflicting samples
+POTER derives sample importance weights from the dual potentials of
+class-conditioned optimal transport (OT) between the training distribution and
+a reference distribution constructed from limited validation-set group annotations.
+These weights reflect distributional alignment rather than losses from a
+preliminary classifier, allowing POTER to emphasize bias-conflicting samples
 and downweight strongly bias-aligned or mislabeled samples. It improves
-robustness to spurious correlations and label noise without requiring training
-group annotations or additional retraining stages.
+robustness to spurious correlations and label noise without requiring training-set
+group annotations. By constructing sample weights before model training, POTER
+requires only a single standard ERM training stage, moving beyond pipelines that
+rely on preliminary downstream-task training followed by full-model or last-layer
+retraining.
 
 ## Requirements
 
@@ -19,7 +23,10 @@ numpy
 scipy
 pandas
 tqdm
-transformers           # for CivilComments
+Pillow
+scikit-learn
+transformers
+pytorch-transformers
 ```
 
 ## Dataset Preparation
